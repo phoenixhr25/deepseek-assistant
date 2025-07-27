@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DeepSeek 中文助手</title>
+    <style>
+        body {
+            font-family: "Helvetica", "Arial", sans-serif;
+            background-color: #f4f4f4;
+            margin: 40px;
+            padding: 20px;
+            color: #333;
+        }
+
+        h2 {
+            color: #222;
+            font-size: 28px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #444;
+        }
+
+        p {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>提问你的 DeepSeek 中文助手</h2>
+
+    <form method="post">
+        <label>请输入问题：</label><br>
+        <input type="text" name="question" size="60" value="{{ question }}"/><br><br>
+        <input type="submit" value="提交问题"/>
+    </form>
+
+    {% if answer %}
+        <h3>回答：</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
