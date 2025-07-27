@@ -1,10 +1,13 @@
 from flask import Flask, request, render_template
 import requests
-import os  # 新增
+import os
+from dotenv import load_dotenv  # ✅ 加载 .env 的库
+
+load_dotenv()  # ✅ 读取 .env 文件
 
 app = Flask(__name__)
 
-API_KEY = "sk-05ca625428194754ae0d5f4b4043f4ac"
+API_KEY = os.getenv("DEEPSEEK_API_KEY")  # ✅ 从环境变量读取，不再硬编码
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 def ask_deepseek(question):
@@ -42,5 +45,5 @@ def home():
     return render_template("index.html", question=question, answer=answer)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))       # 读取 Render 平台注入的端口号
-    app.run(host="0.0.0.0", port=port, debug=True)  # 监听外部请求
+    port = int(os.environ.get("PORT", 5000))  # ✅ Render 会自动注入 PORT
+    app.run(host="0.0.0.0", port=port, debug=True)
