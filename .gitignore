@@ -3,3 +3,10 @@ __pycache__/
 *.log
 .DS_Store
 .DS_Store
+
+.DS_Store
+.env
+
+.DS_Store
+.env
+.env
