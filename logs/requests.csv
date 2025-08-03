@@ -1,0 +1,8 @@
+timestamp,ip_masked,model,status,duration_ms
+2025-08-03T13:20:10Z,127.0.x.x,deepseek-reasoner,http_200,19748
+2025-08-03T13:20:11Z,127.0.x.x,deepseek-reasoner,http_200,19113
+2025-08-03T13:20:36Z,127.0.x.x,deepseek-reasoner,http_200,18971
+2025-08-03T13:20:56Z,127.0.x.x,deepseek-reasoner,http_200,19587
+2025-08-03T13:28:04Z,127.0.x.x,deepseek-chat,ok,20183
+2025-08-03T13:28:06Z,127.0.x.x,deepseek-chat,ok,20374
+2025-08-03T13:28:41Z,127.0.x.x,deepseek-reasoner,ok,18870
